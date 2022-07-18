@@ -1,0 +1,127 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #2196f3;
+}
+
+.search-form > input {
+  height: 40px;
+  width: 340px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 0 55px 0 15px;
+  outline: none;
+}
+
+.search-form > button {
+  position: absolute;
+  top: auto;
+  right: calc(50% - 205px);
+  font-size: 30px;
+  text-align: center;
+  background-color: #f5f4fa;
+  color: #212121;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 4px;
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-form > button:hover {
+  background-color: #dad7e9;
+
+  transform: scale(1.05);
+}
+
+.load-more {
+  display: none;
+  width: 200px;
+  height: 30px;
+  color: #f5f4fa;
+  margin: 15px auto;
+  background-color: #2196f3;
+  border: none;
+  border-radius: 2px;
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.load-more:hover {
+  background-color: #196fb6;
+  transform: scale(1.05);
+}
+
+.load-more.active {
+  display: block;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: baseline;
+  padding: 30px 15px;
+}
+
+.photo-card {
+  width: calc((100vw - 4 * 30px) / 4);
+  height: 250px;
+  text-decoration: none;
+  color: inherit;
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.photo-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.photo-card > img {
+  display: block;
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: calc(250px - 75% - 21px);
+  padding: 10px 20px;
+  border: 1px solid #eeeeee;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.end-of-content {
+  display: none;
+  color: #f5f4fa;
+  background-color: #2196f3;
+  text-align: center;
+  font-size: 24px;
+  padding: 15px 0;
+}
+
+.end-of-content.active {
+  display: block;
+}
